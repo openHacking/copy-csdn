@@ -1,5 +1,5 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "一键复制csdn代码",
 	"version": "1.0",
 	"description": "无需登录一键复制csdn代码。支持选中代码，或者代码右上角按钮的一键复制。",
@@ -10,7 +10,7 @@
 		"48": "icon.png",
 		"128": "icon.png"
 	},
-	"browser_action": 
+	"action": 
 	{
 		"default_icon": "icon.png",
 		"default_popup": "popup.html"
@@ -20,12 +20,8 @@
 		{
 			"matches": ["https://blog.csdn.net/*"],
 			"js": ["content-script.js"],
-			"css": ["css/custom.css"]
+			"css": ["custom.css"]
 		}
 	],
-	"omnibox": { "keyword" : "copy" },
-	"web_accessible_resources": 
-	[
-		"inject.js"
-	]
+	"omnibox": { "keyword" : "copy" }
 }
