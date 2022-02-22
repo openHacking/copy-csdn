@@ -20,7 +20,8 @@
 		{
 			"matches": ["https://blog.csdn.net/*"],
 			"js": ["content-script.js"],
-			"css": ["custom.css"]
+			"css": ["custom.css"],
+			"run_at": "document_end"
 		}
 	],
 	"omnibox": { "keyword" : "copy" }
