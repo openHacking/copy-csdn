@@ -9,7 +9,10 @@ CSDN博客在未登录状态下无法复制代码，使用这个插件，无需�
 ### Chrome商店
 
 直接下载安装：
+1. 进入 [Chrome网上应用商店](https://chrome.google.com/webstore/category/extensions?hl=zh-CN)
+2. 搜索：一键复制csdn代码
 
+![](https://cdn.jsdelivr.net/gh/openHacking/static-files@main/img/1645522384306copy-csdn-web-store.png)
 ### 源码安装
 
 1. clone源码
