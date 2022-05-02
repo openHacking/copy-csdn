@@ -1,28 +1,28 @@
 {
-	"manifest_version": 3,
-	"name": "一键复制csdn代码",
-	"version": "1.1",
-	"description": "无需登录一键复制csdn代码。支持选中代码，或者代码右上角按钮的一键复制。",
-	"author": "openHacking",
-	"homepage_url": "https://github.com/openHacking/copy-csdn",
-	"icons":
-	{
-		"48": "icon.png",
-		"128": "icon.png"
-	},
-	"action": 
-	{
-		"default_icon": "icon.png",
-		"default_popup": "popup.html"
-	},
-	"content_scripts": 
-	[
-		{
-			"matches": ["https://blog.csdn.net/*"],
-			"js": ["content-script.js"],
-			"css": ["custom.css"],
-			"run_at": "document_end"
-		}
-	],
-	"omnibox": { "keyword" : "copy" }
+  "manifest_version": 3,
+  "name": "一键复制csdn代码",
+  "version": "1.2",
+  "description": "无需登录一键复制csdn代码。支持选中代码，或者代码右上角按钮的一键复制。",
+  "author": "openHacking",
+  "homepage_url": "https://lwebapp.com/",
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://blog.csdn.net/*"],
+      "js": ["content-script.js"],
+      "css": ["custom.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "omnibox": { "keyword": "copy" },
+  "background": {
+    "service_worker": "background.js"
+  }
 }
