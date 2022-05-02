@@ -4,6 +4,8 @@
 
 CSDN博客在未登录状态下无法复制代码，使用这个插件，无需登录可以一键复制csdn代码
 
+完整分析：[谷歌插件：无需登录一键复制 CSDN 代码](https://lwebapp.com/zh/post/copy-csdn)
+
 ## 安装
 
 ### Chrome商店
