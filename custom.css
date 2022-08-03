@@ -7,3 +7,13 @@
   -ms-user-select: auto !important;
   user-select: auto !important;
 }
+
+/* 隐藏登陆弹窗 */
+.passport-login-container {
+  display:none !important;
+}
+
+/* 关注博主才能查看文章，开放文章 */
+#article_content{
+  height: auto !important;
+}

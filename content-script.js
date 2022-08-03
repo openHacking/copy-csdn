@@ -26,6 +26,13 @@
     navigator.clipboard.writeText(str);
   }
 
+  function addCSS(styles) {
+    let styleSheet = document.createElement("style")
+    styleSheet.innerText = styles
+    document.head.appendChild(styleSheet)
+  }
+
+  // 功能一： 修改复制按钮，支持一键复制
   const buttons = Array.isArray($$(".hljs-button"))
     ? $$(".hljs-button")
     : [$$(".hljs-button")];
@@ -58,4 +65,16 @@
       e.preventDefault();
     });
   });
+
+  // 功能二：解除 关注博主即可阅读全文的提示，
+  let readMore = document.querySelector('.btn-readmore')
+  let style = `
+  .hide-article-box{
+    z-index: -1 !important;
+  }
+  `
+  
+  if(readMore){
+      addCSS(style)
+  }
 })();
