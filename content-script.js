@@ -32,6 +32,10 @@
     document.head.appendChild(styleSheet)
   }
 
+  // 内容区开启复制
+  content_views = document.querySelector("#content_views")
+  content_views.replaceWith(content_views.cloneNode(true));
+
   // 功能一： 修改复制按钮，支持一键复制
   const buttons = Array.isArray($$(".hljs-button"))
     ? $$(".hljs-button")
@@ -77,4 +81,5 @@
   if(readMore){
       addCSS(style)
   }
+  
 })();
