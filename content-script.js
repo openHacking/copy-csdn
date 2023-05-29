@@ -77,9 +77,23 @@
     z-index: -1 !important;
   }
   `
-  
-  if(readMore){
-      addCSS(style)
+
+  if (readMore) {
+    addCSS(style)
   }
-  
+
+  openPre()
+
+  // 自动展开代码块
+  function openPre() {
+    const pres = Array.from(document.querySelectorAll('main div.blog-content-box pre.set-code-hide'))
+    const presBox = Array.from(document.querySelectorAll('.hide-preCode-box'))
+
+    pres.forEach((pre) => {
+      pre.style.height = 'unset'
+    })
+    presBox.forEach((box) => {
+      box.style.display = 'none'
+    })
+  }
 })();
