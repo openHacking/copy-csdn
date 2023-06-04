@@ -1,10 +1,13 @@
 {
   "manifest_version": 3,
   "name": "一键复制csdn代码",
-  "version": "1.4",
+  "version": "1.5",
   "description": "无需登录一键复制csdn代码。支持选中代码，或者代码右上角按钮的一键复制；解除关注博主即可阅读全文提示；去除登陆弹窗。",
   "author": "openHacking",
   "homepage_url": "https://lwebapp.com/",
+  "permissions": [
+    "storage"
+  ],
   "icons": {
     "48": "icon.png",
     "128": "icon.png"

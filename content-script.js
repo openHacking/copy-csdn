@@ -82,7 +82,8 @@
     addCSS(style)
   }
 
-  openPre()
+  // 判定是否需要展开代码块
+  listenerChange()
 
   // 自动展开代码块
   function openPre() {
@@ -95,5 +96,27 @@
     presBox.forEach((box) => {
       box.style.display = 'none'
     })
+  }
+
+  function listenerChange() {
+    // chrome.storage.onChanged.addListener((changes, namespace) => {
+    //   for (let [key, { oldValue, newValue }] of Object.entries(changes)) {
+    //     console.log(
+    //       `Storage key "${key}" in namespace "${namespace}" changed.`,
+    //       `Old value was "${oldValue}", new value is "${newValue}".`
+    //     );
+    //     if (key === 'autoOpenCodeCheck') {
+    //     }
+    //   }
+    // });
+
+    chrome.storage.sync.get(['autoOpenCodeCheck']).then((result) => {
+      const check =
+        result.autoOpenCodeCheck === undefined ? true : result.autoOpenCodeCheck;
+
+      if (check) {
+        openPre()
+      }
+    });
   }
 })();
