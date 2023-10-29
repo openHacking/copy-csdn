@@ -92,6 +92,7 @@
 
     pres.forEach((pre) => {
       pre.style.height = 'unset'
+      pre.style.maxHeight = 'unset'
     })
     presBox.forEach((box) => {
       box.style.display = 'none'
